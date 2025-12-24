@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  <g transform="translate(100, 80)">
+    <!-- Document -->
+    <rect x="50" y="0" width="212" height="280" rx="20" fill="white"/>
+    <!-- Fold corner -->
+    <path d="M262 0 L262 50 L212 50 Z" fill="#e0e7ff"/>
+    <path d="M262 0 L212 0 L212 50" fill="none" stroke="#c7d2fe" stroke-width="2"/>
+    <!-- Avatar circle -->
+    <circle cx="156" cy="70" r="35" fill="#e0e7ff"/>
+    <circle cx="156" cy="60" r="15" fill="#6366f1"/>
+    <ellipse cx="156" cy="90" rx="22" ry="15" fill="#6366f1"/>
+    <!-- Lines -->
+    <rect x="80" y="130" width="152" height="12" rx="6" fill="#c7d2fe"/>
+    <rect x="80" y="155" width="120" height="10" rx="5" fill="#e0e7ff"/>
+    <rect x="80" y="180" width="152" height="12" rx="6" fill="#c7d2fe"/>
+    <rect x="80" y="205" width="100" height="10" rx="5" fill="#e0e7ff"/>
+    <rect x="80" y="230" width="140" height="12" rx="6" fill="#c7d2fe"/>
+  </g>
+  <!-- Checkmark -->
+  <circle cx="400" cy="400" r="70" fill="#10b981"/>
+  <polyline points="360,400 385,430 440,370" fill="none" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

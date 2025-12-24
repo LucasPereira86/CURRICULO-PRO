@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Crie seu currículo profissional grátis em minutos. Templates modernos, exportação PDF gratuita. Sem cadastro!">
+    <meta name="keywords"
+        content="gerador de currículo, currículo grátis, criar currículo, curriculum vitae, CV online">
+    <title>CurrículoPro - Gerador de Currículo Grátis | Crie seu CV em Minutos</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">📄</span>
+                <span class="logo-text">Currículo<span class="logo-highlight">Pro</span></span>
+            </a>
+            <nav class="nav">
+                <a href="#templates" class="nav-link">Templates</a>
+                <a href="#como-funciona" class="nav-link">Como Funciona</a>
+                <a href="#dicas" class="nav-link">Dicas</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#criar" class="nav-link btn-nav">Criar Currículo</a>
+            </nav>
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>✨</span> 100% Grátis • Sem Cadastro
+                </div>
+                <h1 class="hero-title">
+                    Crie seu <span class="gradient-text">Currículo Profissional</span> em Minutos
+                </h1>
+                <p class="hero-subtitle">
+                    Templates modernos, exportação PDF instantânea, totalmente grátis.
+                    Junte-se a milhares de profissionais que já conquistaram seu emprego!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#criar" class="btn btn-primary btn-lg">
+                        <span>🚀</span> Criar Meu Currículo
+                    </a>
+                    <a href="#templates" class="btn btn-secondary btn-lg">
+                        <span>👀</span> Ver Templates
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number counter" data-target="15247">0</span>
+                        <span class="stat-label">Currículos criados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5min</span>
+                        <span class="stat-label">Para criar</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">PDF</span>
+                        <span class="stat-label">Exportação</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="resume-preview-card">
+                    <div class="preview-header"></div>
+                    <div class="preview-avatar"></div>
+                    <div class="preview-lines">
+                        <div class="preview-line w80"></div>
+                        <div class="preview-line w60"></div>
+                        <div class="preview-line w90"></div>
+                        <div class="preview-line w70"></div>
+                        <div class="preview-line w85"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="como-funciona">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>1. Preencha seus dados</h3>
+                    <p>Nome, experiência, formação e habilidades. Simples e rápido!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>2. Escolha um template</h3>
+                    <p>Templates modernos e profissionais para diferentes áreas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>3. Baixe em PDF</h3>
+                    <p>Exportação instantânea, grátis, pronto para enviar!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <div class="social-proof-avatars">
+                    <div class="avatar-stack">
+                        <div class="avatar-placeholder">JM</div>
+                        <div class="avatar-placeholder">AS</div>
+                        <div class="avatar-placeholder">PT</div>
+                        <div class="avatar-placeholder">LC</div>
+                        <div class="avatar-placeholder">+</div>
+                    </div>
+                </div>
+                <div class="social-proof-text">
+                    <strong><span class="counter" data-target="4872">0</span>+ profissionais</strong>
+                    <span>criaram seus currículos esta semana</span>
+                </div>
+                <div class="star-rating">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="templates-section" id="templates">
+        <div class="container">
+            <h2 class="section-title">Templates Profissionais</h2>
+            <p class="section-subtitle">Escolha o estilo que combina com você</p>
+
+            <div class="templates-grid">
+                <div class="template-card" data-template="moderno">
+                    <div class="template-preview template-moderno">
+                        <div class="tp-sidebar"></div>
+                        <div class="tp-content">
+                            <div class="tp-line"></div>
+                            <div class="tp-line short"></div>
+                            <div class="tp-line"></div>
+                        </div>
+                    </div>
+                    <h4>Moderno</h4>
+                    <p>Clean e profissional</p>
+                </div>
+
+                <div class="template-card" data-template="classico">
+                    <div class="template-preview template-classico">
+                        <div class="tp-header-bar"></div>
+                        <div class="tp-body">
+                            <div class="tp-line"></div>
+                            <div class="tp-line short"></div>
+                            <div class="tp-line"></div>
+                        </div>
+                    </div>
+                    <h4>Clássico</h4>
+                    <p>Tradicional e elegante</p>
+                </div>
+
+                <div class="template-card" data-template="criativo">
+                    <div class="template-preview template-criativo">
+                        <div class="tp-accent"></div>
+                        <div class="tp-main">
+                            <div class="tp-circle"></div>
+                            <div class="tp-line"></div>
+                            <div class="tp-line short"></div>
+                        </div>
+                    </div>
+                    <h4>Criativo</h4>
+                    <p>Destaque visual</p>
+                </div>
+
+                <div class="template-card" data-template="minimalista">
+                    <div class="template-preview template-minimalista">
+                        <div class="tp-body">
+                            <div class="tp-header-line"></div>
+                            <div class="tp-line"></div>
+                            <div class="tp-line short"></div>
+                            <div class="tp-line"></div>
+                        </div>
+                    </div>
+                    <h4>Minimalista</h4>
+                    <p>Simples e elegante</p>
+                </div>
+
+                <div class="template-card" data-template="executivo">
+                    <div class="template-preview template-executivo">
+                        <div class="tp-gold-bar"></div>
+                        <div class="tp-body">
+                            <div class="tp-line"></div>
+                            <div class="tp-line short"></div>
+                        </div>
+                    </div>
+                    <h4>Executivo</h4>
+                    <p>Premium e sofisticado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Builder Section -->
+    <section class="builder-section" id="criar">
+        <div class="container">
+            <h2 class="section-title">Crie seu Currículo</h2>
+
+            <div class="builder-layout">
+                <!-- Form Panel -->
+                <div class="form-panel">
+                    <!-- Progress -->
+                    <div class="form-progress">
+                        <div class="progress-step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Dados</span>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Experiência</span>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Formação</span>
+                        </div>
+                        <div class="progress-step" data-step="4">
+                            <span class="step-number">4</span>
+                            <span class="step-label">Habilidades</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Personal Data -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-actions-bar">
+                            <h3 class="form-step-title">Dados Pessoais</h3>
+                            <button type="button" class="btn btn-sm btn-clear" onclick="clearAllData()">
+                                🗑️ Limpar Tudo
+                            </button>
+                        </div>
+
+                        <div class="form-row form-row-photo">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" placeholder="Ex: João Silva Santos" required>
+                            </div>
+                            <div class="form-group photo-upload-group">
+                                <label>Foto (opcional)</label>
+                                <div class="photo-upload-container">
+                                    <div class="photo-preview" id="photoPreview">
+                                        <span class="photo-placeholder">📷</span>
+                                        <img id="photoPreviewImg" src="" alt="Preview" style="display: none;">
+                                    </div>
+                                    <div class="photo-actions">
+                                        <label for="photoInput" class="btn btn-sm btn-outline photo-btn">
+                                            📤 Adicionar Foto
+                                        </label>
+                                        <button type="button" class="btn btn-sm btn-outline photo-remove"
+                                            id="removePhoto" style="display: none;">
+                                            ❌ Remover
+                                        </button>
+                                        <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cargo">Cargo Desejado *</label>
+                                <input type="text" id="cargo" placeholder="Ex: Desenvolvedor Web">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone *</label>
+                                <input type="tel" id="telefone" placeholder="(11) 99999-9999">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" placeholder="São Paulo">
+                            </div>
+                            <div class="form-group">
+                                <label for="estado">Estado</label>
+                                <input type="text" id="estado" placeholder="SP">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn (opcional)</label>
+                                <input type="url" id="linkedin" placeholder="linkedin.com/in/seuperfil">
+                            </div>
+                            <div class="form-group">
+                                <label for="portfolio">Portfólio/GitHub (opcional)</label>
+                                <input type="url" id="portfolio" placeholder="github.com/seuperfil">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resumo">Resumo Profissional</label>
+                            <textarea id="resumo" rows="4"
+                                placeholder="Breve descrição sobre você, suas principais qualificações e objetivos profissionais..."></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-primary" onclick="nextStep(2)">
+                                Próximo <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Experience -->
+                    <div class="form-step" id="step2">
+                        <h3 class="form-step-title">Experiência Profissional</h3>
+
+                        <div id="experiencias-container">
+                            <div class="experience-item" data-index="0">
+                                <div class="form-group">
+                                    <label>Cargo</label>
+                                    <input type="text" class="exp-cargo" placeholder="Ex: Analista de Marketing">
+                                </div>
+                                <div class="form-group">
+                                    <label>Empresa</label>
+                                    <input type="text" class="exp-empresa" placeholder="Nome da empresa">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Início</label>
+                                        <input type="text" class="exp-inicio" placeholder="Jan 2020">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fim</label>
+                                        <input type="text" class="exp-fim" placeholder="Atual">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Descrição das Atividades</label>
+                                    <textarea class="exp-descricao" rows="3"
+                                        placeholder="Descreva suas principais responsabilidades e conquistas..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-outline btn-add" onclick="addExperience()">
+                            + Adicionar Experiência
+                        </button>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(1)">
+                                <span>←</span> Anterior
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep(3)">
+                                Próximo <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Education -->
+                    <div class="form-step" id="step3">
+                        <h3 class="form-step-title">Formação Acadêmica</h3>
+
+                        <div id="formacoes-container">
+                            <div class="education-item" data-index="0">
+                                <div class="form-group">
+                                    <label>Curso</label>
+                                    <input type="text" class="edu-curso" placeholder="Ex: Administração de Empresas">
+                                </div>
+                                <div class="form-group">
+                                    <label>Instituição</label>
+                                    <input type="text" class="edu-instituicao"
+                                        placeholder="Nome da universidade/escola">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Início</label>
+                                        <input type="text" class="edu-inicio" placeholder="2018">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Conclusão</label>
+                                        <input type="text" class="edu-fim" placeholder="2022">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-outline btn-add" onclick="addEducation()">
+                            + Adicionar Formação
+                        </button>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(2)">
+                                <span>←</span> Anterior
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep(4)">
+                                Próximo <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Skills -->
+                    <div class="form-step" id="step4">
+                        <h3 class="form-step-title">Habilidades</h3>
+
+                        <div class="form-group">
+                            <label for="habilidades">Habilidades Técnicas</label>
+                            <textarea id="habilidades" rows="3"
+                                placeholder="Ex: Excel, Word, PowerPoint, Inglês Intermediário, Photoshop..."></textarea>
+                            <small>Separe por vírgula</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idiomas">Idiomas</label>
+                            <textarea id="idiomas" rows="2"
+                                placeholder="Ex: Português (Nativo), Inglês (Intermediário), Espanhol (Básico)"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cursos">Cursos Complementares (opcional)</label>
+                            <textarea id="cursos" rows="3"
+                                placeholder="Ex: Curso de Excel Avançado - Coursera (2023)"></textarea>
+                        </div>
+
+                        <div class="template-selector">
+                            <label>Escolha o Template:</label>
+                            <div class="template-options">
+                                <label class="template-option active">
+                                    <input type="radio" name="template" value="moderno" checked>
+                                    <span>Moderno</span>
+                                </label>
+                                <label class="template-option">
+                                    <input type="radio" name="template" value="classico">
+                                    <span>Clássico</span>
+                                </label>
+                                <label class="template-option">
+                                    <input type="radio" name="template" value="criativo">
+                                    <span>Criativo</span>
+                                </label>
+                                <label class="template-option">
+                                    <input type="radio" name="template" value="minimalista">
+                                    <span>Minimalista</span>
+                                </label>
+                                <label class="template-option">
+                                    <input type="radio" name="template" value="executivo">
+                                    <span>Executivo</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="color-picker-section">
+                            <label>🎨 Cor do Template:</label>
+                            <div class="color-options">
+                                <div class="color-option active" data-color="indigo" title="Índigo"></div>
+                                <div class="color-option" data-color="emerald" title="Esmeralda"></div>
+                                <div class="color-option" data-color="rose" title="Rosa"></div>
+                                <div class="color-option" data-color="amber" title="Âmbar"></div>
+                                <div class="color-option" data-color="cyan" title="Ciano"></div>
+                                <div class="color-option" data-color="purple" title="Roxo"></div>
+                                <div class="color-option" data-color="slate" title="Cinza"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(3)">
+                                <span>←</span> Anterior
+                            </button>
+                            <button type="button" class="btn btn-success btn-lg" onclick="generateResume()">
+                                <span>📄</span> Gerar Currículo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview Panel -->
+                <div class="preview-panel">
+                    <div class="preview-header">
+                        <h3>Pré-visualização</h3>
+                        <button class="btn btn-sm btn-primary" onclick="downloadPDF()" id="btnDownload" disabled>
+                            📥 Baixar PDF
+                        </button>
+                    </div>
+                    <div class="preview-container" id="resumePreview">
+                        <div class="preview-placeholder">
+                            <span>👆</span>
+                            <p>Preencha os dados ao lado para ver a pré-visualização do seu currículo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section" id="dicas">
+        <div class="container">
+            <h2 class="section-title">💡 Dicas para um Currículo Perfeito</h2>
+            <p class="section-subtitle">Siga estas dicas dos recrutadores para se destacar</p>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h4>Seja Objetivo</h4>
+                    <p>Mantenha seu currículo em 1-2 páginas. Recrutadores gastam em média 7 segundos na primeira
+                        análise.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📊</div>
+                    <h4>Use Números</h4>
+                    <p>Quantifique suas conquistas. "Aumentei vendas em 30%" é mais impactante que "Melhorei vendas".
+                    </p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔑</div>
+                    <h4>Palavras-chave</h4>
+                    <p>Inclua termos da vaga desejada. Muitas empresas usam sistemas que filtram por palavras-chave.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">✏️</div>
+                    <h4>Personalize</h4>
+                    <p>Adapte seu currículo para cada vaga. Destaque as experiências mais relevantes para a posição.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🔍</div>
+                    <h4>Revise Bem</h4>
+                    <p>Erros de português podem eliminar você. Revise várias vezes e peça para alguém ler.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">📧</div>
+                    <h4>E-mail Profissional</h4>
+                    <p>Use um e-mail sério como nome.sobrenome@email.com, não apelidos ou números aleatórios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">❓ Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tire suas dúvidas sobre currículos</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Preciso incluir foto no currículo?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Depende da área e empresa. Em geral, no Brasil é comum incluir foto, mas não obrigatório.
+                            Para áreas criativas ou atendimento ao público, pode ser um diferencial. Para vagas
+                            internacionais, geralmente não se usa foto para evitar viés.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Quantas páginas deve ter meu currículo?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            O ideal é 1 página para profissionais iniciantes e até 2 páginas para profissionais
+                            experientes. Recrutadores preferem currículos concisos e objetivos. Qualidade é mais
+                            importante que quantidade.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Devo incluir todas as minhas experiências?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Não necessariamente. Priorize experiências relevantes para a vaga. Experiências muito
+                            antigas (mais de 10-15 anos) ou que não agregam à posição desejada podem ser resumidas ou
+                            omitidas.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como destacar meu currículo se não tenho experiência?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Destaque sua formação acadêmica, cursos, projetos pessoais, trabalhos voluntários, estágios
+                            e habilidades. Mostre iniciativa, vontade de aprender e competências comportamentais (soft
+                            skills).
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        O PDF gerado é realmente gratuito?
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Sim! O CurrículoPro é 100% gratuito, sem marcas d'água, sem limitações e sem necessidade de
+                            cadastro. Você pode gerar e baixar quantos currículos quiser, em qualquer template.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">📄</span>
+                    <span class="logo-text">Currículo<span class="logo-highlight">Pro</span></span>
+                    <p>Criador de currículos 100% grátis</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#criar">Criar Currículo</a>
+                    <a href="#templates">Templates</a>
+                    <a href="#como-funciona">Como Funciona</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>📧 Contato & Parcerias</h4>
+                    <a href="mailto:sane.ads.sites@gmail.com">sane.ads.sites@gmail.com</a>
+                    <p>Interessado em anunciar? Entre em contato!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 CurrículoPro - Todos os direitos reservados</p>
+                <p>Feito com ❤️ para ajudar você a conquistar seu emprego dos sonhos</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Gerando seu PDF...</p>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" title="Alternar modo escuro">
+        🌙
+    </button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
